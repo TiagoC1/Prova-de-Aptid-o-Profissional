@@ -1,0 +1,26 @@
+{
+  "name": "prova-de-aptid-o-profissional",
+  "version": "1.0.0",
+  "description": "Início da prova",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TiagoC1/Prova-de-Aptid-o-Profissional.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TiagoC1/Prova-de-Aptid-o-Profissional/issues"
+  },
+  "homepage": "https://github.com/TiagoC1/Prova-de-Aptid-o-Profissional#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15",
+    "path": "^0.12.7"
+  }
+}
