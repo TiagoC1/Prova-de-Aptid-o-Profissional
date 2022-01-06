@@ -12,7 +12,7 @@
     right: 0px;
 }
 .tit_pagina {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:Georgia, 'Times New Roman', Times, serif;
     color: rgb(250, 242, 242);
     font-size: 16px;
     margin-left: 50px;
@@ -21,7 +21,7 @@
 .p1{
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-    font-size: 24px;
+    font-size: 26px;
     padding: 10px;
   
 }
@@ -38,19 +38,30 @@
    
 
 }
-.h1{
+.p3{
     font-family:"Times New Roman", Times, serif;
     color: rgb(14, 13, 13);
-    font-size: 6px;
+    font-size: 25px;
+    margin-left: 25px;
+    vertical-align: middle;
+}
+.p4{
+    font-family:"Times New Roman", Times, serif;
+    padding: 40px;
+    color: rgb(14, 13, 13);
+    font-size: 25px;
     margin-left: 25px;
     vertical-align: middle;
 }
 .educacao{
     display: block;
+    text-align: center;
     margin-left: auto;
     margin-right: auto;
-    width: 10%;
-    height: 15px;
+    width: 30%;
+    padding: 10px;
+    height: auto;
+    
 }
 body {
     
@@ -59,7 +70,7 @@ body {
     justify-content: top;
     align-items: center;
     height: 100px;
-    background: #23b499;
+    background: #2d504a;
     font-family: 'Open Sans', sans-serif;
     color: #fff;
  }
@@ -107,4 +118,11 @@ body {
  .select:hover::after {
     color: #23b499;
  }
-
+label{
+    font-family:"Times New Roman", Times, serif;
+    padding: 45px;
+    color: rgb(14, 13, 13);
+    font-size: 20px;
+    margin-left: 25px;
+    vertical-align: middle;
+}
