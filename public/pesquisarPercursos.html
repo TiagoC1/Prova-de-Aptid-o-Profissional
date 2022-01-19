@@ -11,36 +11,35 @@
     </script>
 </head>
 <body>
-    <p class ="p3">Pretende estudar onde </p class="p3">
+ <p class ="p3">Pretende estudar onde </p class="p3">
    
 </body>
-    <div class="select">
-        <select name="format" id="format">
-            <option selected disabled>Escolha onde pretende estudar </option>
-            <option value="">Cá na ilha</option>
-             <option value="">Fora da ilha</option>     
-        </select>
-    </div>
-     <label for="Disciplina">Escolhe a sua área de preferência:</label>
-          <select name="área" id="área">
-         <option value="">--Seleciona--</option>
-         <option value="1">exemplo</option>
-        <option value="2">exemplo</option>
-         <option value="3">exemplo</option>
-        <option value="4">exemplo</option>
-     </select>
-    <br><br>
-        <label for="Disciplina">Disciplinas com menos dificuldades:</label>
-         <select name="disciplina" id="disciplina">
-        <option value="">--Seleciona--</option>
-         <option value="">Matématica</option>
-        <option value="">Português</option>
-        <option value="">Inglês</option>
-        <option value="">Ai</option>
-        </select>
-    <br><br>
-
-    <button class="btn btn-primary me-md-2" type="button">Button</button>
-           
-   
+<select id="Nível">
+    <option value="AC">São Miguel</option>
+    <option value="AL">Pico</option>
+    
+</select>
+<div class="box">
+        <form action="">
+            <fieldset>
+                <legend><b>Pesquisar Percursos</b></legend>
+                <br>
+                <label for="nome" class="labelInput">Designação</label>
+                <div class="inputBox">
+                    <input type="text" name="nome" id="nome" class="inputUser" required>
+                </div>
+                <br><br>
+                <select id="Nível">
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    
+                </select>
+                <br><br>
+                <div class="inputBox">
+                    <input type="tel" name="telefone" id="telefone" class="inputUser" required>
+                    <label for="telefone" class="labelInput">Telefone</label>
+                </div>
+                
+                
 </html>
