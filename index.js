@@ -1,7 +1,9 @@
 const express = require('express')
 const app = express()
 const path = require('path')
+//const connection = require('./dbconnection')
 
+//define caminho para a pasta pública do projeto
 app.use(express.static('./public'))
 
 app.get('/', function (req, res) {
