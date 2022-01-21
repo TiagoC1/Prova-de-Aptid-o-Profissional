@@ -11,35 +11,49 @@
     </script>
 </head>
 <body>
- <p class ="p3">Pretende estudar onde </p class="p3">
+ <!--<p class ="p3">Pretende estudar onde </p class="p3"> -->
    
 </body>
-<select id="Nível">
+    <!--<select id="Nível">
     <option value="AC">São Miguel</option>
-    <option value="AL">Pico</option>
+    <option value="AL">Pico</option> 
     
-</select>
-<div class="box">
-        <form action="">
-            <fieldset>
-                <legend><b>Pesquisar Percursos</b></legend>
-                <br>
-                <label for="nome" class="labelInput">Designação</label>
-                <div class="inputBox">
-                    <input type="text" name="nome" id="nome" class="inputUser" required>
-                </div>
-                <br><br>
-                <select id="Nível">
-                    <option value="AC">Acre</option>
-                    <option value="AL">Alagoas</option>
-                    <option value="AP">Amapá</option>
-                    
-                </select>
-                <br><br>
-                <div class="inputBox">
-                    <input type="tel" name="telefone" id="telefone" class="inputUser" required>
-                    <label for="telefone" class="labelInput">Telefone</label>
-                </div>
-                
+</select> -->
+    <div class="wrapper">
+    <div class="title">
+        Pesquisar Pescursos
+    </div>
+    <div class="form">
+       <div class="inputfield">
+          <label>Designação</label>
+          <input type="text" class="input">
+       </div>  
+       <div class="inputfield">
+        <label>Nível</label>
+        <div class="custom_select">
+          <select>
+            <option value="">Select</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+          </select>
+        </div>
+       <div class="inputfield">
+          <label>Disciplinas com mais dificuldades</label>
+          <input type="text" class="input">
+       </div>  
+      <div class="inputfield">
+          <label>Disciplinas com menos dificuldades</label>
+          <input type="text" class="input">
+       </div> 
+        <div class="inputfield">
+          <label>Escolha a ilha que pretende ir </label>
+          <div class=" ilha_select">
+            <select>
+              <option value="">Select</option>
+              <option value="p">Pico</option>
+              <option value="m">São Miguel</option>
+            </select>
+          </div>
+    
                 
 </html>
