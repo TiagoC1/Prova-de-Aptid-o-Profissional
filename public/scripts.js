@@ -18,3 +18,4 @@ function getNivel(){
 let pesquisarPercursos ={
     idnivel : nivel
 }
+let jsasonPesquisar = JSON.stringify(pesquisarPercursos)

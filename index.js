@@ -6,6 +6,7 @@ const path = require('path')
 //define caminho para a pasta pública do projeto
 app.use(express.static('./public'))
 
+// Definir Rotas
 app.use('/percursos', require('./routes/percursosRoute'))
 
 app.get('/', function (req, res) {
