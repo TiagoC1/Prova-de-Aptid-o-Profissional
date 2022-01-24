@@ -13,7 +13,7 @@ function getNavbar(){
     .catch(function(err){
         alert('Ocorreu um problema...')
     })
-}/*
+}
 function getNivel(){
     const nivel = document.getElementById('nivel')
     fetch('http://localhost:3000/percursos')
@@ -27,7 +27,7 @@ function getNivel(){
         }
     })
     .catch()
-}
+}/*
 let pesquisarPercursos ={
     idnivel : nivel
 }
