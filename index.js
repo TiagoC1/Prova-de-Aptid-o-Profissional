@@ -8,6 +8,7 @@ app.use(express.static('./public'))
 
 // Definir Rotas
 app.use('/percursos', require('./routes/percursosRoute'))
+app.use('/navbar',require('./routes/navbarRoute'))
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(_dirname, '/public/index.html'))
