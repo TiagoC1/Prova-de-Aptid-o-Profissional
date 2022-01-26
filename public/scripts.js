@@ -1,6 +1,7 @@
 function init (){
     getNavbar()
     getNivel ()
+    getIlhas()
 }
 
 function getNavbar(){
@@ -19,17 +20,33 @@ function getNivel(){
     fetch('http://localhost:3000/percursos')
     .then (res => res.json())
     .then(data => {
-        console.log(data)
+     
         for(let i=0; i<data.length; i++){
             const op=
-            `<option value ="${data[i].idnivel}">${data[i].designacao}</option>`
+            `<option value ="${data[i].idnivel}">${data[i].nivel_do_curso}</option>`
              nivel.innerHTML +=op
         }
     })
     .catch()
-}/*
+}
+function getIlhas(){
+    const ilhas = document.getElementById('ilhas')
+    fetch('http://localhost:3000/percursos/ilhas')
+    .then (res => res.json())
+    .then(data => {
+        console.log(data)
+        for(let i=0; i<data.length; i++){
+            const op=
+            `<option value ="${data[i].idilhas}">${data[i].nome_da_ilha}</option>`
+             ilhas.innerHTML +=op
+        }
+    })
+    .catch()
+}
+/*
 let pesquisarPercursos ={
-    idnivel : nivel
+    idnivel : nivel,
+    idilhas : ilhas,
 }
 let jsasonPesquisar = JSON.stringify(pesquisarPercursos)
 */
