@@ -52,7 +52,7 @@ function getArea(){
         console.log(data)
         for(let i=0; i<data.length; i++){
             const op=
-            `<option value ="${data[i].idcursos}">${data[i].nome_do_curso}</option>`
+            `<option value ="${data[i].idárea}">${data[i].nome_área}</option>`
              ilhas.innerHTML +=op
         }
     })

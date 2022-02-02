@@ -24,7 +24,7 @@ percursosRoute.get('/ilhas', (req, res)=>{
     })
 })
 percursosRoute.get('/area', (req, res)=>{
-    connection.query('SELECT * FROM cursos', (err, result) =>{
+    connection.query('SELECT * FROM área', (err, result) =>{
         if(err){
             console.log('Erro na base de dados...')
         }
