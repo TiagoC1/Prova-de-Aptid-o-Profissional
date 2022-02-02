@@ -23,5 +23,15 @@ percursosRoute.get('/ilhas', (req, res)=>{
         }
     })
 })
+percursosRoute.get('/area', (req, res)=>{
+    connection.query('SELECT * FROM cursos', (err, result) =>{
+        if(err){
+            console.log('Erro na base de dados...')
+        }
+        else{
+            res.json(result)
+        }
+    })
+})
 
 module.exports = percursosRoute

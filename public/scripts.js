@@ -2,6 +2,7 @@ function init (){
     getNavbar()
     getNivel ()
     getIlhas()
+    getArea()
 }
 
 function getNavbar(){
@@ -38,6 +39,20 @@ function getIlhas(){
         for(let i=0; i<data.length; i++){
             const op=
             `<option value ="${data[i].idilhas}">${data[i].nome_da_ilha}</option>`
+             ilhas.innerHTML +=op
+        }
+    })
+    .catch()
+}
+function getArea(){
+    const ilhas = document.getElementById('area')
+    fetch('http://localhost:3000/percursos/area')
+    .then (res => res.json())
+    .then(data => {
+        console.log(data)
+        for(let i=0; i<data.length; i++){
+            const op=
+            `<option value ="${data[i].idcursos}">${data[i].nome_do_curso}</option>`
              ilhas.innerHTML +=op
         }
     })
