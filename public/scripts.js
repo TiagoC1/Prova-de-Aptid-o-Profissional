@@ -76,3 +76,9 @@ function pesquisar(){
     }
     console.log(ob)
 }
+    const tipo = document.getElementById('nivel').value
+    if(nivel=='')
+    alert('Tem de escolher um nivel')
+    else
+    console.log(nivel)
+    
