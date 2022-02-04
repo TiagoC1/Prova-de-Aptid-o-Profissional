@@ -14,14 +14,18 @@
     <div id="nbar">
     </div>
    
- <!--<p class ="p3">Pretende estudar onde </p class="p3"> -->
-   
-    <!--<select id="Nível">
-    <option value="AC">São Miguel</option>
-    <option value="AL">Pico</option> 
-    
-</select> -->
     <div class ="container">
+      <!--
+        <div class="row">
+            <div class="col-md-4">
+              codigo das pesquisas
+            </div>
+            <div class = col-md-8>
+              codigo dos resultados
+            </div>
+
+        </div>
+      -->
       <div class="wrapper">
         <div class="title">
         Pesquisar Pescursos
@@ -45,12 +49,11 @@
           </select>
         </div>
        </div>
-        
         <div class="inputfield">
           <label>Ilha de preferência</label>
           <div class=" ilha_select">
             <select
-              class="from-select" id="ilhas">
+              class="from-select" id="ilha">
               <option value="Nenhum selecionado">--Nenhum selecionado--</option>
             </select>
           </div>
@@ -67,26 +70,19 @@
           <label>Disciplinas com mais dificuldades</label>
           <input type="text" class="input"> 
           <div class="inputfield">
-            <input type="submit" value="Pesquisar" class="btn">
+            <input onclick="pesquisar()" type="submit" value="Pesquisar" class="btn">
           </div>
         </div>
       </div>
       </div>
       <p class ="p3">Resultados da pesquisa: </p class="p3">
-          <table class="table">
+          <table class="table-container">
             <thead>
               <tr>
                 <th scope="col"><p class ="p4">Área de Educação e Formação: </p class="p4"></th>
               </tr>
             </thead>
-            <tbody>
-              <tr>
-                <th scope="row"><p class ="p5">  Técnico/a de Produção e Tecnologias da Música </p class="p5">
-                </th>
-              </tr>
            
-
-            </tbody>
           </table>
         </div>
         </body>

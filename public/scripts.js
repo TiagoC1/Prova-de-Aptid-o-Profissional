@@ -31,7 +31,7 @@ function getNivel(){
     .catch()
 }
 function getIlhas(){
-    const ilhas = document.getElementById('ilhas')
+    const ilhas = document.getElementById('ilha')
     fetch('http://localhost:3000/percursos/ilhas')
     .then (res => res.json())
     .then(data => {
@@ -58,10 +58,21 @@ function getArea(){
     })
     .catch()
 }
-/*
-let pesquisarPercursos ={
-    idnivel : nivel,
-    idilhas : ilhas,
+
+function pesquisar(){
+    if(document.getElementById('area').value == 'Nenhum selecionado')
+        alert('Deve escolher uma área!')
+    let area = document.getElementById('area').value
+    if (document.getElementById('nivel').value=='Nenhum selecionado')
+        alert('Deve escolher um nível de ensino!')
+    let nivel = document.getElementById('nivel').value
+    if(document.getElementById('ilha').value=='Nenhum selecionado')
+        alert('Deve escolher uma ilha!')
+    let ilha = document.getElementById('ilha').value
+    let ob = {
+        area: area,
+        nivel: nivel,
+        ilha: ilha
+    }
+    console.log(ob)
 }
-let jsasonPesquisar = JSON.stringify(pesquisarPercursos)
-*/

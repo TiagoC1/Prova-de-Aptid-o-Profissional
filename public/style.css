@@ -282,12 +282,13 @@
   .wrapper .form .inputfield .btn:hover{
     background: #525151;
   }
- .table{
+ .table-container{
+ 
   padding: 70px;
   height: 200px;
   background: linear-gradient(45deg, rgb(219, 247, 247), rgb(206, 206, 204));
   float: center;
-  margin-left: -400px;
+  margin-left: 100px;
   margin-top: 110px;
    
  } 
