@@ -1,3 +1,6 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
 .nav{
     font-family: Arial, Helvetica, sans-serif;
     height: 50px;
@@ -12,7 +15,7 @@
     right: 0px;
 }
 .tit_pagina {
-    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-family:Arial, Helvetica, sans-serif;
     color: rgb(250, 242, 242);
     font-size: 16px;
     margin-left: 50px;
@@ -39,17 +42,17 @@
 
 }
 .p3{
-    font-family:"Times New Roman", Times, serif;
+  font-family: Arial, Helvetica, sans-serif;
     max-width: 400px;
     width: 100%;
     color: rgb(14, 13, 13);
-    margin-top: 20px;
+    margin-top: 25px;
     font-size: 25px;
-    margin-left: 25px;
+    margin-right: 300px;
     vertical-align: middle;
 }
 .p4{
-  font-family:"Times New Roman", Times, serif;
+  font-family: Arial, Helvetica, sans-serif;
   max-width: 400px;
   width: 100%;
   color: rgb(10, 10, 10);
@@ -128,13 +131,13 @@
     margin: 2px;
     box-shadow: 1px 1px 2px rgba(0,0,0,0.125);
     padding: 30px;
-    margin-top: 30px;
+    margin-top: 50px;
     
   }
   .wrapper .title{
     font-size: 24px;
     font-weight: 100px;
-    font-family:"Times New Roman", Times, serif;
+    font-family: Arial, Helvetica, sans-serif;
     margin-bottom: 25px;
     color: #070707;
     text-transform: uppercase;
@@ -281,20 +284,10 @@
   
   .wrapper .form .inputfield .btn:hover{
     background: #525151;
-  }
- .table-container{
- 
-  padding: 70px;
-  height: 200px;
+  } 
+.card{
+  margin-top: 30px;
+  width: 100%;
   background: linear-gradient(45deg, rgb(219, 247, 247), rgb(206, 206, 204));
-  float: center;
-  margin-left: 100px;
-  margin-top: 110px;
-   
- } 
-.container{
-  padding: 30px;
-  display: flex;
-  flex-direction: row;
 }
  

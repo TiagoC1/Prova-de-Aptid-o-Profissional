@@ -1,89 +1,88 @@
 <!DOCTYPE html>
 <html lang="pt-PT">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>pesquisar Percursos</title>
-    <link rel = "stylesheet" type="text/css" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="scripts.js"></script>
-</head>
-    <body onload="init();">
-    <div id="nbar">
-    </div>
-   
-    <div class ="container">
-      <!--
-        <div class="row">
-            <div class="col-md-4">
-              codigo das pesquisas
-            </div>
-            <div class = col-md-8>
-              codigo dos resultados
-            </div>
 
-        </div>
-      -->
-      <div class="wrapper">
-        <div class="title">
-        Pesquisar Pescursos
-      </div>
-      <div class="form">
-       <div class="inputfield">
-          <label>Área de Educação e Formação</label>
-          <div class=" area_select">
-            <select
-              class="from-select" id="area">
-              <option value="Nenhum selecionado">--Nenhum selecionado--</option>
-            </select>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>pesquisar Percursos</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="scripts.js"></script>
+</head>
+
+<body onload="init();">
+  <div id="nbar">
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="wrapper">
+          <div class="title">
+            Pesquisar Percursos
           </div>
-       </div>  
-       <div class="inputfield">
-        <label>Nível</label>
-        <div class="custom_select">
-          <select
-            class ="from-select" id="nivel">
-            <option value="Nenhum selecionado">--Nenhum selecionado--</option>
-          </select>
-        </div>
-       </div>
-        <div class="inputfield">
-          <label>Ilha de preferência</label>
-          <div class=" ilha_select">
-            <select
-              class="from-select" id="ilha">
-              <option value="Nenhum selecionado">--Nenhum selecionado--</option>
-            </select>
-          </div>
-       </div> 
-      <div class="inputfield">
-        <label>Área de Preferência</label>
-        <input type="text" class="input">
-       </div>  
-      <div class="inputfield">
-          <label>Disciplinas com menos dificuldades</label>
-          <input type="text" class="input">
-       </div> 
-        <div class="inputfield">
-          <label>Disciplinas com mais dificuldades</label>
-          <input type="text" class="input"> 
-          <div class="inputfield">
-            <input onclick="pesquisar()" type="submit" value="Pesquisar" class="btn">
+          <div class="form">
+            <div class="inputfield">
+              <label>Área de Educação e Formação</label>
+              <div class=" area_select">
+                <select class="from-select" id="area">
+                  <option value="Nenhum selecionado">--Nenhum selecionado--</option>
+                </select>
+              </div>
+            </div>
+            <div class="inputfield">
+              <label>Nível</label>
+              <div class="custom_select">
+                <select class="from-select" id="nivel">
+                  <option value="Nenhum selecionado">--Nenhum selecionado--</option>
+                </select>
+              </div>
+            </div>
+            <div class="inputfield">
+              <label>Ilha de preferência</label>
+              <div class=" ilha_select">
+                <select class="from-select" id="ilha">
+                  <option value="Nenhum selecionado">--Nenhum selecionado--</option>
+                </select>
+              </div>
+            </div>
+            <div class="inputfield">
+              <label>Área de Preferência</label>
+              <input type="text" class="input">
+            </div>
+            <div class="inputfield">
+              <label>Disciplinas com menos dificuldades</label>
+              <input type="text" class="input">
+            </div>
+            <div class="inputfield">
+              <label>Disciplinas com mais dificuldades</label>
+              <input type="text" class="input">
+              <div class="inputfield">
+                <input onclick="pesquisar()" type="submit" value="Pesquisar" class="btn">
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      </div>
-      <p class ="p3">Resultados da pesquisa: </p class="p3">
-          <table class="table-container">
-            <thead>
-              <tr>
-                <th scope="col"><p class ="p4">Área de Educação e Formação: </p class="p4"></th>
-              </tr>
-            </thead>
-           
-          </table>
+      <div class="col-sm-6 mt-4">
+        <p class="p3">Resultados da pesquisa: </p class="p3">
+        <div class="card">
+          <h5 class="card-header">Área de Educação e Formação:</h5>
+          <div class="card-body">
+            <h5 class="card-title">Special title treatment</h5>
+            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <a href="#" class="btn btn-primary">Ver Mais</a>
+          </div>
         </div>
-        </body>
+      </div>
+    </div>
+
+  </div>
+</body>
+
 </html>
