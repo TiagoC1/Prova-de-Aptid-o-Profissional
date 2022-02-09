@@ -13,6 +13,7 @@
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
   <script type="text/javascript" src="scripts.js"></script>
+  
 </head>
 
 <body onload="init();">
@@ -36,7 +37,15 @@
               </div>
             </div>
             <div class="inputfield">
-              <label>Nível</label>
+              <label>Nível 
+                <div class="icon interrogação">
+                  <div class="tooltip">
+                    Nível 4 – Ensino secundário obtido por percursos de dupla certificação ou ensino secundário.
+                    Nível 2 – 3.º ciclo do ensino básico, obtido no ensino regular ou por percursos de dupla certificação
+                  </div>
+                  <span><i class="fab fa-interrogação-f">?</i></span>
+              </label>
+             </div>
               <div class="custom_select">
                 <select class="from-select" id="nivel">
                   <option value="Nenhum selecionado">--Nenhum selecionado--</option>
@@ -52,24 +61,16 @@
               </div>
             </div>
             <div class="inputfield">
-              <label>Área de Preferência</label>
+              <label>Concelho</label>
               <input type="text" class="input">
             </div>
-            <div class="inputfield">
-              <label>Disciplinas com menos dificuldades</label>
-              <input type="text" class="input">
-            </div>
-            <div class="inputfield">
-              <label>Disciplinas com mais dificuldades</label>
-              <input type="text" class="input">
               <div class="inputfield">
                 <input onclick="pesquisar()" type="submit" value="Pesquisar" class="btn">
               </div>
-            </div>
           </div>
         </div>
-      </div>
-      <div class="col-sm-6 mt-4">
+       </div>
+       <div class="col-sm-6 mt-4">
         <p class="p3">Resultados da pesquisa: </p class="p3">
         <div class="card">
           <h5 class="card-header">Área de Educação e Formação:</h5>
