@@ -315,7 +315,7 @@
   transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 .wrapper .icon span i{
-  line-height: 17px;
+  line-height: 20px;
   font-size: 15px;
  
 }
@@ -353,3 +353,13 @@
 .wrapper .icon:hover span{
   color: rgb(10, 10, 10);
 }
+#btnOpen{
+  margin-left: 597px;
+  font-size: 15px; 
+  border-color: #bbb9b9;
+  background:  #bbb9b9;
+  color: #fff;
+}
+#btnOpen:hover{
+    background: #2e2d2d;
+  } 

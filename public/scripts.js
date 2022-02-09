@@ -81,4 +81,4 @@ function pesquisar(){
     alert('Tem de escolher um nivel')
     else
     console.log(nivel)
-    
+     
