@@ -6,6 +6,10 @@ const path = require('path')
 //define caminho para a pasta pública do projeto
 app.use(express.static('./public'))
 
+//reconhecer body json
+app.use(express.urlencoded({ extended: true }))
+app.use(express.json({ extended: false }))
+
 // Definir Rotas
 app.use('/percursos', require('./routes/percursosRoute'))
 app.use('/navbar',require('./routes/navbarRoute'))

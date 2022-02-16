@@ -74,11 +74,36 @@ function pesquisar(){
         nivel: nivel,
         ilha: ilha
     }
-    console.log(ob)
+    //criar um JSON do objeto
+  let jsonDados = JSON.stringify(ob)
+  console.log(jsonDados)
+  //preparar o pedido
+  const options = {
+      method: 'POST',
+      headers: {
+          'Content-type' : 'application/json'
+      },
+      body: jsonDados
+  }
+  fetch('http://localhost:3000/percursos/percursos', options)
+  .then(res => res.json())
+  .then(data => processData(data))
+  .catch((err) => {
+      alert(err)  
+  })
 }
-    const tipo = document.getElementById('nivel').value
-    if(nivel=='')
-    alert('Tem de escolher um nivel')
-    else
-    console.log(nivel)
-     
+
+function processData(data){
+    const cartoes_cursos = document.getElementById('cartoes_cursos')
+    cartoes_cursos.innerHTML=''
+    `<div class="card">
+    <h5 class="card-header">Área de Educação e Formação:</h5>
+    <div class="card-body">
+      <h5 class="card-title">Special title treatment</h5>
+      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      <a href="#" class="btn btn-info">Ver Mais</a>
+    </div>
+  </div>`
+}
+  
+  

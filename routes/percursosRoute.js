@@ -34,4 +34,20 @@ percursosRoute.get('/area', (req, res)=>{
     })
 })
 
+percursosRoute.post('/percursos', (req, res)=>{
+    try{
+        connection.query('CALL getCursos(?,?,?)',
+        [req.body.nivel,req.body.area,req.body.ilha],
+        (error,result) => {
+            if(error) throw error
+            res.json(result[0])
+        })
+    }
+    catch(error)
+    {
+        res.json({msg:'Ocorreu um erro na base de dados'})
+    }    
+    
+})
+
 module.exports = percursosRoute
