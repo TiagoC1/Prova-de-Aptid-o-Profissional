@@ -285,11 +285,7 @@
   .wrapper .form .inputfield .btn:hover{
     background: #525151;
   } 
-.card{
-  margin-top: 30px;
-  width: 100%;
-  background: linear-gradient(45deg, rgb(219, 247, 247), rgb(206, 206, 204));
-}
+
 .wrapper .icon{
   margin: 0 20px;
   text-align: center;

@@ -96,14 +96,19 @@ function pesquisar(){
 function processData(data){
     const cartoes_cursos = document.getElementById('cartoes_cursos')
     cartoes_cursos.innerHTML=''
-    `<div class="card">
-    <h5 class="card-header">Área de Educação e Formação:</h5>
-    <div class="card-body">
-      <h5 class="card-title">Special title treatment</h5>
-      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-      <a href="#" class="btn btn-info">Ver Mais</a>
-    </div>
-  </div>`
+    for(let i =0 ; i < data.length; i++) {
+        cartoes_cursos.innerHTML+=
+        `<div class="card mb-5">
+        <h5 class="card-header"><strong>Área de Educação e Formação: </strong>${data[i].nome_área}</h5>
+        <div class="card-body">
+          <p class="card-text">${data[i].nome_do_curso}</p>
+          <p class="card-text">${data[i].nivel_do_curso}</p>
+          <p class="card-text">${data[i].nome_das_escolas}</p>
+          <p class="card-text">${data[i].nome_da_ilha}</p>
+          <a href="#" class="btn btn-info">Ver Mais</a>
+        </div>
+      </div>`
+    }
 }
   
   
