@@ -87,13 +87,27 @@ function pesquisar(){
   }
   fetch('http://localhost:3000/percursos/percursos', options)
   .then(res => res.json())
-  .then(data => processData(data))
+  .then(data => {
+    console.log(data)
+      if(data.length!=0)
+        processData(data)
+        else {
+            const alert = document.getElementById('alert')
+            alert.innerHTML = `
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <strong>Não existem cursos disponíveis nessa área e ilha</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            `
+        }
+  })
   .catch((err) => {
       alert(err)  
   })
-}
 
+}
 function processData(data){
+    document.getElementById('alert').innerHTML=''
     const cartoes_cursos = document.getElementById('cartoes_cursos')
     cartoes_cursos.innerHTML=''
     for(let i =0 ; i < data.length; i++) {
@@ -105,10 +119,19 @@ function processData(data){
           <p class="card-text">${data[i].nivel_do_curso}</p>
           <p class="card-text">${data[i].nome_das_escolas}</p>
           <p class="card-text">${data[i].nome_da_ilha}</p>
-          <a href="#" class="btn btn-info">Ver Mais</a>
+          <button onclick="getURL(${data[i].idcursos})" type="button" class="btn btn-primary">Ver mais</button>
         </div>
       </div>`
     }
 }
-  
-  
+
+function getURL(id){
+    fetch('http://localhost:3000/percursos/url/'+id)
+    .then (res => res.json())
+    .then(data => {
+        window.open(data.urlcatalogo, '_blank')
+
+    })
+    .catch()
+}
+

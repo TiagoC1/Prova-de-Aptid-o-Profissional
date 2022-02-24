@@ -34,6 +34,19 @@ percursosRoute.get('/area', (req, res)=>{
     })
 })
 
+percursosRoute.get('/url/:id', (req, res)=>{
+    connection.query('SELECT urlcatalogo FROM cursos WHERE idcursos = ?', 
+    [req.params.id],
+    (err, result) =>{
+        if(err){
+            console.log('Erro na base de dados...')
+        }
+        else{
+            res.json(result[0])
+        }
+    })
+})
+
 percursosRoute.post('/percursos', (req, res)=>{
     try{
         connection.query('CALL getCursos(?,?,?)',
