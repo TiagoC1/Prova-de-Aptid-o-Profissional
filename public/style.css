@@ -72,6 +72,7 @@
     
 }
 
+
 .main-wrap{
     width: 100%;
     background: #fff;
@@ -359,3 +360,11 @@
 #btnOpen:hover{
     background: #2e2d2d;
   } 
+ .card-img-top{
+   padding: 20px;
+  font-weight: 300px;
+  max-width: 240px;
+  width:40%;
+  font-size: 80%;
+   margin-bottom: 16px;
+ }
