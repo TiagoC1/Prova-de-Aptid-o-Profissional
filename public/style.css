@@ -38,8 +38,6 @@
     margin-right:auto ;
     padding: 20px;
     width: 100%;
-   
-
 }
 .p3{
   font-family: Arial, Helvetica, sans-serif;
@@ -60,7 +58,26 @@
   margin-left: 100px;
   vertical-align: middle;
 }
-
+.p5{
+  font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 26px;
+    padding: 20px;
+}
+.p6{
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  font-size: 20px;
+ 
+}
+.p7{
+  font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+    text-align: center;
+    margin-left: auto;
+    margin-right:auto ;
+    width: 100%;
+}
 .educacao{
     display: block;
     text-align: center;
@@ -359,7 +376,9 @@
 }
 #btnOpen:hover{
     background: #2e2d2d;
+    
   } 
+
  .card-img-top{
    padding: 20px;
   font-weight: 300px;
@@ -368,3 +387,4 @@
   font-size: 80%;
    margin-bottom: 16px;
  }
+ 

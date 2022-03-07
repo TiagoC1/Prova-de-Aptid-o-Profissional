@@ -33,7 +33,7 @@ percursosRoute.get('/area', (req, res)=>{
         }
     })
 })
-
+// Rota para obter um post
 percursosRoute.get('/url/:id', (req, res)=>{
     connection.query('SELECT urlcatalogo FROM cursos WHERE idcursos = ?', 
     [req.params.id],
@@ -46,7 +46,7 @@ percursosRoute.get('/url/:id', (req, res)=>{
         }
     })
 })
-
+// Rota para criação do post
 percursosRoute.post('/percursos', (req, res)=>{
     try{
         connection.query('CALL getCursos(?,?,?)',
