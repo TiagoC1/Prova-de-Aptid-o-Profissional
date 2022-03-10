@@ -1,21 +1,39 @@
 function init (){
-    getNavbar()
+    getNavFooter()
     getNivel ()
     getIlhas()
     getArea()
+}
+
+function getNavFooter(){
+    getNavbar()
+    getFooter()
 }
 
 function getNavbar(){
     const nbar = document.getElementById('nbar')
     fetch('http://localhost:3000/navbar')
     .then(res => res.text())
-    .then((html)=>[
+    .then((html)=>{
         nbar.innerHTML += html
-    ])
+    })
     .catch(function(err){
         alert('Ocorreu um problema...')
     })
 }
+
+function getFooter(){
+    const fter = document.getElementById('fter')
+    fetch('http://localhost:3000/footer')
+    .then(res => res.text())
+    .then((html)=>{
+        fter.innerHTML += html
+    })
+    .catch(function(err){
+        alert('Ocorreu um problema...')
+    })
+}
+
 function getNivel(){
     const nivel = document.getElementById('nivel')
     fetch('http://localhost:3000/percursos')
