@@ -3,6 +3,27 @@ function init (){
     getNivel ()
     getIlhas()
     getArea()
+    const ilha = document.getElementById('ilha')
+    ilha.addEventListener('change',()=>{
+        const cartoes_cursos = document.getElementById('cartoes_cursos')
+        cartoes_cursos.innerHTML=''
+        const alert = document.getElementById('alert')
+        alert.innerHTML=''
+    })
+    const area = document.getElementById('area')
+    area.addEventListener('change',()=>{
+        const cartoes_cursos = document.getElementById('cartoes_cursos')
+        cartoes_cursos.innerHTML=''
+        const alert = document.getElementById('alert')
+        alert.innerHTML=''
+    })
+    const nivel = document.getElementById('nivel')
+    nivel.addEventListener('change',()=>{
+        const cartoes_cursos = document.getElementById('cartoes_cursos')
+        cartoes_cursos.innerHTML=''
+        const alert = document.getElementById('alert')
+        alert.innerHTML=''
+    })
 }
 
 function getNavFooter(){
@@ -87,41 +108,46 @@ function pesquisar(){
     if(document.getElementById('ilha').value=='Nenhum selecionado')
         alert('Deve escolher uma ilha!')
     let ilha = document.getElementById('ilha').value
-    let ob = {
-        area: area,
-        nivel: nivel,
-        ilha: ilha
-    }
-    //criar um JSON do objeto
-  let jsonDados = JSON.stringify(ob)
-  console.log(jsonDados)
-  //preparar o pedido
-  const options = {
-      method: 'POST',
-      headers: {
-          'Content-type' : 'application/json'
-      },
-      body: jsonDados
-  }
-  fetch('http://localhost:3000/percursos/percursos', options)
-  .then(res => res.json())
-  .then(data => {
-    console.log(data)
-      if(data.length!=0)
-        processData(data)
-        else {
-            const alert = document.getElementById('alert')
-            alert.innerHTML = `
-            <div class="alert alert-danger alert-dismissible fade show" role="alert">
-            <strong>Não existem cursos disponíveis nessa área e ilha</strong>
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-            `
+    if(area!='Nenhum selecionado'&& nivel!='Nenhum selecionado' && ilha!='Nenhum selecionado'){
+        let ob = {
+            area: area,
+            nivel: nivel,
+            ilha: ilha
         }
-  })
-  .catch((err) => {
-      alert(err)  
-  })
+        //criar um JSON do objeto
+      let jsonDados = JSON.stringify(ob)
+      console.log(jsonDados)
+      //preparar o pedido
+      const options = {
+          method: 'POST',
+          headers: {
+              'Content-type' : 'application/json'
+          },
+          body: jsonDados
+      }
+      fetch('http://localhost:3000/percursos/percursos', options)
+      .then(res => res.json())
+      .then(data => {
+        console.log(data)
+          if(data.length!=0)
+            processData(data)
+            else {
+                const cartoes_cursos = document.getElementById('cartoes_cursos')
+                cartoes_cursos.innerHTML=''
+                const alert = document.getElementById('alert')
+                alert.innerHTML = `
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <strong>Não existem cursos disponíveis nessa área e ilha</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                `
+            }
+      })
+      .catch((err) => {
+          alert(err)  
+      })
+    }
+   
 
 }
 function processData(data){
